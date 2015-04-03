@@ -19,14 +19,10 @@ define([
 
     initialize: (props)->
       @props = props
-      @dispatchToken = dispatcher.register((payload)=>
-        @dispatchCallback(payload)
-      )
-
-    dispatchCallback: (payload)->
-      switch payload.actionType
-        when "add-plotPoint"
-          @add {'story': payload}
+      @on "change reset add remove", ->
+        dispatcher.dispatch
+          actionType: "plots-changed"
+          plots: @
 
   ItemCollection
 )

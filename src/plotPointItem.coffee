@@ -6,7 +6,7 @@ define([
 )->
   PlotPoint = Backbone.Model.extend
     url: ->
-      "plot_point/#{@id}"
+      "/plot_point/#{@id}"
     defaults:
       id: -1
 
