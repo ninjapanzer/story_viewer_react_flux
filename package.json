@@ -5,7 +5,7 @@
   "main": "story.min.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
+    "dev": "webpack=dev webpack-dev-server --devtool eval --progress --colors --content-base build"
   },
   "author": "",
   "license": "MIT",
@@ -13,10 +13,13 @@
     "coffee-jsx-loader": "^0.1.0",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.9.1",
+    "connect": "^3.3.5",
+    "connect-prism": "^1.0.1",
+    "grunt": "^0.4.5",
     "jshint": "^2.6.0",
     "jshint-loader": "^0.8.3",
     "jsx-loader": "^0.12.2",
     "webpack": "^1.6.0",
-    "webpack-dev-server": "^1.7.0"
+    "webpack-dev-server": "^1.8.2"
   }
 }
