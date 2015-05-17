@@ -4,11 +4,11 @@ var bower_dir = __dirname + '/bower_components';
 var resolveBowerPath = function(componentPath) {
     return path.join(bower_dir, componentPath);
 };
-module.exports = {
+webpackConfig = {
   entry: './src/app.coffee',
   devtool: "source-map",
   output: {
-    path: './build',
+    path: './dist',
     filename: 'story.min.js'
   },
   externals: ['React', 'Flux', 'jQuery', '_', '$', 'Backbone'],
@@ -18,6 +18,12 @@ module.exports = {
       //{ test: /\.coffee$/, loader: "coffee" }
     ]
   },
+  devServer: {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "*"
+    }
+  },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({minimize: true})
   ],
@@ -25,3 +31,9 @@ module.exports = {
     extensions: ["", ".web.coffee", ".web.js", ".coffee", ".js"]
   }
 };
+
+if(process.env.webpack != undefined){
+  webpackConfig.output.path = './build'
+}
+
+module.exports = webpackConfig;
