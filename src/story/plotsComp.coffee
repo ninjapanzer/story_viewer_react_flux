@@ -31,12 +31,16 @@ define('PlotsComponent',[
     render: ->
       <div style={@divStyle}>
         Plots
-        <div>
-          <span style={@title}>Title: </span><span>{@state.plots[0]?.get 'title'}</span>
-        </div>
-        <div>
-          <span style={@title}>Description: </span><span>{@state.plots[0]?.get 'description'}</span>
-        </div>
+        { @state.plots?.map (item)->
+          <div>
+            <div>
+              <span style={@title}>Title: </span><span>{item.get 'title'}</span>
+            </div>
+            <div>
+              <span style={@title}>Description: </span><span>{item.get 'description'}</span>
+            </div>
+          </div>
+        }
       </div>
 
   PlotsComponent
