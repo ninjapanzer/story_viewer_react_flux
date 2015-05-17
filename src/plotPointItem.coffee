@@ -7,10 +7,12 @@ define([
   Config
 )->
   PlotPoint = Backbone.Model.extend
-    url: ->
-      "#{Config.path}/plot_point/#{@id}"
+
+    urlRoot: "#{Config.path}/plot_points"
+
     defaults:
-      id: -1
+      title: "title",
+      desc:  "desc"
 
   PlotPoint
 )
