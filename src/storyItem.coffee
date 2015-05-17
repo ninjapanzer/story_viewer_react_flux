@@ -2,15 +2,17 @@ define([
   'Backbone'
   './storyDispatcher'
   './plotPointStore'
+  './config'
 ],
 (
   backbone
   dispatcher
   plotPointStore
+  Config
 )->
   Story = Backbone.Model.extend
     url: ->
-      "/story/#{@get('id')}"
+      "#{Config.path}/story/#{@get('id')}"
 
     defaults:
       id: -1

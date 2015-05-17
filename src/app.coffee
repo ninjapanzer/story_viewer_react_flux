@@ -6,6 +6,7 @@ define([
   './storyItem'
   './plotPointStore'
   './story/storyComp'
+  './config'
 ],
 (
   React
@@ -15,6 +16,7 @@ define([
   story
   plotPointStore
   storyComp
+  Config
 )->
   $storyView = jQuery('#story-view')
   storyID = $storyView.data('story')

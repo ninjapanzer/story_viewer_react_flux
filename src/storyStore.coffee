@@ -2,14 +2,16 @@ define([
   './storyDispatcher'
   './storyItem'
   'Backbone'
+  './config'
 ],
 (
   dispatcher
   Story
   backbone
+  Config
 )->
   ItemCollection = Backbone.Collection.extend
-    url: '/stories'
+    url: '#{Config.path}/stories'
     model: Story
 
     initialize: ->

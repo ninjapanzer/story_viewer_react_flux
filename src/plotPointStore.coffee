@@ -2,15 +2,17 @@ define([
   './storyDispatcher'
   './plotPointItem'
   'Backbone'
+  './config'
 ],
 (
   dispatcher
   plotPoint
   backbone
+  Config
 )->
   ItemCollection = Backbone.Collection.extend
     url: ->
-      "/story/#{@props.story}/plot_points/"
+      "#{Config.path}/story/#{@props.story}/plot_points/"
 
     defaults:
       story: -1

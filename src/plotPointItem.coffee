@@ -1,12 +1,14 @@
 define([
   'Backbone'
+  './config'
 ],
 (
   backbone
+  Config
 )->
   PlotPoint = Backbone.Model.extend
     url: ->
-      "/plot_point/#{@id}"
+      "#{Config.path}/plot_point/#{@id}"
     defaults:
       id: -1
 
