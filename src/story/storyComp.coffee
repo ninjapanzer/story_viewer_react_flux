@@ -2,11 +2,13 @@ define('StoryComponent',[
   'React'
   '../storyDispatcher'
   './plotsComp'
+  './plotControlsComp'
 ],
 (
   React
   dispatcher
   plotsComp
+  plotControlsComp
 )->
   StoryComponent = React.createClass
 
@@ -40,6 +42,7 @@ define('StoryComponent',[
           <span style={@title}>Description: </span><span>{@state.story.get? 'description'}</span>
         </div>
         <plotsComp/>
+        <plotControlsComp story={ @state.story }/>
       </div>
 
   StoryComponent
