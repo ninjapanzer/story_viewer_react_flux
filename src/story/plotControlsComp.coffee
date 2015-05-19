@@ -1,14 +1,12 @@
 define('plotControlsComponent',[
   'React'
   '../storyDispatcher'
-  '../plotPointStore'
   '../plotPointItem'
   '../config'
 ],
 (
   React
   dispatcher
-  plotPointStore
   plotPointItem
   Config
 )->

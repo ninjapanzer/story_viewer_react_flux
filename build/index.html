@@ -8,8 +8,22 @@
   <script src='./components/flux/dist/Flux.js'></script>
   <script src='./components/react/react.min.js'></script>
   <title>My project</title>
+  <style>
+    #svgContainer{
+      z-index: -10;
+      position: absolute;
+      opacity: 0.5;
+      margin: 50px 50px;
+    }
+  </style>
 </head>
 <body>
+  <div id="svgContainer">
+    <svg id="svg1" width="0" height="0" >
+      <path id="myNewPath" d="M0 0" stroke-width="0.3em" style='stroke:#000;fill:none;'/>
+      <path id="myNewPath2" d="M0 0" stroke-width="0.3em" style='stroke:#000;fill:none;'/>
+    </svg>
+  </div>
   <div id="story-view" data-story="1"></div>
   <script src='story.min.js'></script>
 </body>
