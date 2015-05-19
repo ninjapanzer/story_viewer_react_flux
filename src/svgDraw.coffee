@@ -1,3 +1,4 @@
+# Converted from https://gist.github.com/alojzije/11127839#file-demo-png
 module.exports = {
   signum: (x) ->
     if x < 0 then -1 else 1
